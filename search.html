@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://*.firebaseio.com https://*.googleapis.com https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://www.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;" />
+    <title>Search | Our Space</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:;base64,=" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="top-nav">
+        <a class="brand" href="home.html">
+          <span class="brand-mark">✦</span>
+          <span>Our Space</span>
+        </a>
+        <nav class="top-nav-links">
+          <a href="home.html">Home</a>
+          <a class="active" href="search.html">Search</a>
+          <a href="notifications.html">Notifications</a>
+          <a href="rooms.html">Rooms</a>
+          <a href="profile.html">Profile</a>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <section class="panel glass search-panel">
+          <div class="panel-head">
+            <h3>Discover people</h3>
+            <p class="muted">Search by username in real time.</p>
+          </div>
+          <label class="search-field">
+            <input id="searchInput" type="text" placeholder="Search @john" />
+          </label>
+          <div id="results" class="results-list"></div>
+          <p id="statusNote" class="status-text"></p>
+        </section>
+      </main>
+    </div>
+
+    <nav class="mobile-nav">
+      <a href="home.html">Home</a>
+      <a class="active" href="search.html">Search</a>
+      <a href="chat.html">Chats</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+
+    <script type="module" src="search.js"></script>
+  </body>
+</html>

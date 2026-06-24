@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://*.firebaseio.com https://*.googleapis.com https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://www.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;" />
+    <title>Home | Our Space</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:;base64,=" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="top-nav">
+        <a class="brand" href="home.html">
+          <span class="brand-mark">✦</span>
+          <span>Our Space</span>
+        </a>
+        <nav class="top-nav-links">
+          <a class="active" href="home.html">Home</a>
+          <a href="search.html">Search</a>
+          <a href="notifications.html">Notifications</a>
+          <a href="rooms.html">Rooms</a>
+          <a href="profile.html">Profile</a>
+          <button id="logoutBtn" class="ghost-btn">Logout</button>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <section class="hero-card glass">
+          <div class="hero-copy">
+            <p class="eyebrow">Welcome back</p>
+            <h2 id="profileName">Loading profile…</h2>
+            <p id="profileUsername" class="muted">@username</p>
+            <p id="profileBio" class="hero-bio">Where friendship feels warm, personal, and beautifully connected.</p>
+            <div class="hero-stats">
+              <a class="stat-pill" href="profile.html#friends-panel">
+                <strong id="friendsCount">0</strong>
+                <span>Friends</span>
+              </a>
+            </div>
+          </div>
+          <div class="hero-avatar" id="heroAvatar">U</div>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel glass">
+            <div class="panel-head">
+              <h3>Discover</h3>
+              <a href="search.html">See all</a>
+            </div>
+            <div class="quick-grid">
+              <a class="quick-card" href="search.html">🔍 Search people</a>
+              <a class="quick-card" href="chat.html">💬 Start chatting</a>
+              <a class="quick-card" href="rooms.html">🏟️ Join rooms</a>
+              <a class="quick-card" href="notifications.html">🔔 Check updates</a>
+            </div>
+          </div>
+
+          <div class="panel glass">
+            <div class="panel-head">
+              <h3>Recent conversations</h3>
+              <a href="chat.html">Open chat</a>
+            </div>
+            <div id="recentChats" class="stack-list">
+              <div class="empty-state">Loading conversations…</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <nav class="mobile-nav">
+      <a href="home.html" class="active">Home</a>
+      <a href="notifications.html">Alerts</a>
+      <a href="chat.html">Chats</a>
+      <a href="rooms.html">Rooms</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+
+    <script type="module" src="home.js"></script>
+  </body>
+</html>

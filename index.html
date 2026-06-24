@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://*.firebaseio.com https://*.googleapis.com https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://www.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;" />
+    <title>Our Space | Premium Social Chat</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:;base64,=" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="aurora-bg"></div>
+    <div class="auth-shell">
+      <div class="auth-card glass">
+        <div class="logo-badge">✦</div>
+        <div class="brand-block">
+          <p class="eyebrow">Premium social space</p>
+          <h1>Our Space</h1>
+          <p class="subtitle">Instantly connect, chat privately, and build your circle.</p>
+        </div>
+
+        <div class="input-stack">
+          <label class="floating-field">
+            <input id="username" type="text" placeholder=" " />
+            <span>Username</span>
+          </label>
+          <label class="floating-field">
+            <input id="email" type="email" placeholder=" " />
+            <span>Email</span>
+          </label>
+          <label class="floating-field">
+            <input id="password" type="password" placeholder=" " />
+            <span>Password</span>
+          </label>
+        </div>
+
+        <button id="signupBtn" class="primary-btn">Create Account</button>
+        <button id="loginBtn" class="secondary-btn">Login</button>
+        <button id="forgotPasswordBtn" class="ghost-btn">Forgot password?</button>
+        <p id="status" class="status-text">Welcome back to a refined chatting experience.</p>
+      </div>
+    </div>
+
+    <script type="module" src="auth.js"></script>
+  </body>
+</html>

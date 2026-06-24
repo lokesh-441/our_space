@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://*.firebaseio.com https://*.googleapis.com https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://www.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;" />
+    <title>Chat | Our Space</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:;base64,=" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+  </head>
+  <body>
+    <div class="chat-page">
+      <div class="chat-header">
+        <div class="header-left">
+          <div class="avatar-circle large" id="roomAvatar">C</div>
+          <div>
+            <h3 id="roomTitle">Loading…</h3>
+            <p id="onlineStatus">Online now</p>
+          </div>
+        </div>
+        <div class="header-right">
+          <button id="clearChatBtn" class="icon-btn">🧹</button>
+          <button id="unfriendBtn" class="icon-btn">💔</button>
+          <button id="backBtn" class="icon-btn">🏠</button>
+          <button id="profileBtn" class="icon-btn">👤</button>
+          <button id="logoutBtn" class="icon-btn logout-btn">Logout</button>
+        </div>
+      </div>
+
+      <div id="typingIndicator" class="typing-indicator">&nbsp;</div>
+      <div id="messages" class="messages"></div>
+
+      <div class="input-area">
+        <button id="emojiBtn" class="icon-btn">😀</button>
+        <input id="messageInput" type="text" placeholder="Type a message" />
+        <button id="sendBtn" class="send-btn">➤</button>
+      </div>
+      <emoji-picker id="emojiPicker"></emoji-picker>
+    </div>
+
+    <script type="module" src="chat.js"></script>
+  </body>
+</html>

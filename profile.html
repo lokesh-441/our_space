@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.gstatic.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self' https://*.firebaseio.com https://*.googleapis.com https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com https://www.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;" />
+    <title>Profile | Our Space</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="data:;base64,=" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="top-nav">
+        <a class="brand" href="home.html">
+          <span class="brand-mark">✦</span>
+          <span>Our Space</span>
+        </a>
+        <nav class="top-nav-links">
+          <a href="home.html">Home</a>
+          <a href="search.html">Search</a>
+          <a href="notifications.html">Notifications</a>
+          <a href="rooms.html">Rooms</a>
+          <a class="active" href="profile.html">Profile</a>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <section class="profile-hero glass">
+          <div class="profile-identity">
+            <div class="hero-avatar large" id="avatarPreview">U</div>
+            <div>
+              <p class="eyebrow">Your profile</p>
+              <h2 id="displayName">Loading…</h2>
+              <p id="profileTag" class="muted">@user</p>
+            </div>
+          </div>
+          <div class="profile-stats-row">
+            <a class="stat-pill" href="#friends-panel"><strong id="friendsCount">0</strong><span>Friends</span></a>
+            <span class="stat-pill"><strong id="followersCount">0</strong><span>Followers</span></span>
+            <span class="stat-pill"><strong id="followingCount">0</strong><span>Following</span></span>
+          </div>
+        </section>
+
+        <section class="panel glass">
+          <div class="panel-head">
+            <h3>Edit profile</h3>
+          </div>
+          <label class="floating-field">
+            <input id="name" type="text" placeholder=" " />
+            <span>Display name</span>
+          </label>
+          <label class="floating-field">
+            <textarea id="bio" rows="4" placeholder=" "></textarea>
+            <span>Bio</span>
+          </label>
+          <div class="button-row">
+            <button id="saveBtn" class="primary-btn">Save profile</button>
+            <button id="backBtn" class="ghost-btn">Back</button>
+            <button id="logoutBtn" class="ghost-btn danger">Logout</button>
+          </div>
+          <p id="status" class="status-text"></p>
+        </section>
+
+        <section id="friends-panel" class="panel glass">
+          <div class="panel-head">
+            <h3>Your friends</h3>
+          </div>
+          <div id="friendsList" class="stack-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <nav class="mobile-nav">
+      <a href="home.html">Home</a>
+      <a href="search.html">Search</a>
+      <a href="chat.html">Chats</a>
+      <a href="rooms.html">Rooms</a>
+      <a class="active" href="profile.html">Profile</a>
+    </nav>
+
+    <script type="module" src="profile.js"></script>
+  </body>
+</html>
